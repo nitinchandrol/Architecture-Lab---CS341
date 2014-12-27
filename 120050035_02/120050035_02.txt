@@ -1,0 +1,3 @@
+.align - for improving performance, removing .align gives exception error in case of int array as last bits should be multiple of 4.
+
+difficult aspects - recursive function calling, sequential structures like array can be improved, regularity issues in non-sequential structures

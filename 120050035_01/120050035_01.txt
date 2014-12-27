@@ -1,0 +1,17 @@
+Question 1 : General Register - Register values are being initialized to 0, final register values after execution.
+Text Segment - Text segments contain machine code, address at which each operation starts and op code of operations.
+Data Segment - Information about data, stack and kernal data.
+Version Details & user interface - Interface showing debugging details, and output of print statements
+
+Question 2 : Address at which program begin 0x00400000
+
+Question 3 : "li" is a pseudo instruction, its get translated to "ori".
+
+Question 4 : 2nd coloumn of Text Segment contains machine code. Op-code can be obtained by changing hex into binary and taking 1st 6 binary digits.
+for example ori operation 
+machine code - 0x34010001
+op-code - 001101
+
+j operation 
+machine code - 0x0810000d
+op-code - 000010

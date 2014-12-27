@@ -1,0 +1,6 @@
+1. What is a cross-compiler? What is the host platform? What is the target platform?
+Ans A cross compiler is a compiler which can produce executable for other platform(architecture).
+The host platform is machine where program is complied.
+The target platform is platform where complied file will be executed.
+
+2.

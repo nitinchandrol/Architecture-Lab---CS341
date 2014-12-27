@@ -1,0 +1,10 @@
+1.What is a cross-compiler? What is the host platform? What is the target platform?
+Ans A cross compiler is a complier which can produce files to be executed in other platform(architecture)
+The host platform is machine where program is complied
+The target platform is a platform where complied file will be executed.
+
+2.exact instruction execution gor gcd-noopt = 150(total instruction) - 9(6 before program starts + 3 after the program) = 141
+exact instruction execution gor gcd-opt = 77(total instruction) - 9(6 before program starts + 3 after the program) = 68
+assuming single cycle implimentation 2 nd is faster 141/68 = 2.07352941176 times 
+
+

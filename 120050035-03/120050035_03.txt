@@ -1,0 +1,4 @@
+Ans:
+when recursive call will be on base case at tht time stack will be of maximum length.
+For 8 length array , after 3 sort call length will be 1 (base case)
+till base case no sort call is terminated thats why maximum size of stack

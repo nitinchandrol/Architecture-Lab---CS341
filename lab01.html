@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0065)http://bodhitree1.cse.iitb.ac.in/media/uploads/section/lab01.html -->
+<html style=""><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	
+	<title></title>
+	<meta name="generator" content="LibreOffice 4.2.2.1 (Windows)">
+	<meta name="author" content="Bhaskaran Raman">
+	<meta name="created" content="20090808;17400000">
+	<meta name="changedby" content="Bhaskaran Raman">
+	<meta name="changed" content="20140727;115122467000000">
+	<meta name="Info 1" content="">
+	<meta name="Info 2" content="">
+	<meta name="Info 3" content="">
+	<meta name="Info 4" content="">
+	<style type="text/css">
+	<!--
+		p { color: #000000 }
+		h1 { color: #000000 }
+		h3.cjk { font-family: "SimSun" }
+		h3.ctl { font-family: "Mangal" }
+		pre { color: #000000 }
+		pre.cjk { font-family: "NSimSun", monospace }
+	-->
+	</style>
+<style type="text/css"></style></head>
+<body lang="en-IN" text="#000000" dir="ltr" style="background: transparent">
+<h1><font color="#800000">CS341, Computer Architecture Lab, Lab 01</font></h1>
+<h3 class="western"><font color="#0000ff">Goals</font></h3>
+<ol>
+	<li><p>Learn the basics of spim/xspim, a simulator for the MIPS
+	architecture</p>
+	</li><li><p>Write and execute some simple assembly language programs</p>
+</li></ol>
+<h3 class="western" style="page-break-after: avoid"><font color="#0000ff">Instructions</font></h3>
+<ol>
+	<li><p>These exercises are to be done individually.</p>
+	</li><li><p>While you are encouraged to discuss with your colleagues, do
+	not cross the fine line between discussion <i>to understand</i>
+	versus discussion as a <i>short-cut</i> to complete your lab without
+	really understanding.</p>
+	</li><li><p>Create a directory called &lt;rollno&gt;-&lt;labno&gt;. Store
+	all relevant files to this lab in that directory.</p>
+	<ol type="a">
+		<li><p>In the exercises, you will be asked various questions. Note
+		down the answers to these in a file called “&lt;rollno&gt;-&lt;labno&gt;.txt”.</p>
+		</li><li><p>In some parts of the exercises, you will have to show a demo
+		to a TA; these are marked as such. The evaluation for each lab may
+		be in the same lab, or in the subsequent lab, or during a time-slot
+		agreed upon with the TAs. For this evaluation, you need to upload
+		your code as well.</p>
+		</li><li><p>While submitting (on bodhitree), you have to create a tar.gz
+		or zip of the entire &lt;rollno&gt;-&lt;labno&gt; directory in
+		which all your relevant files reside.</p>
+	</li></ol>
+	</li><li><p>Before leaving the lab, ensure the following:</p>
+	<ol type="a">
+		<li><p>You have signed the attendance sheet</p>
+		</li><li><p>You have uploaded your submission</p>
+	</li></ol>
+	</li><li><p>Things for you as a student to ensure, during evaluation by a
+	TA of a particular lab submission:</p>
+	<ol type="a">
+		<li><p>The TA has looked at your text file with the answers to
+		various questions</p>
+		</li><li><p>The TA has given you marks out of 10, and has entered it in
+		the marks sheet, with his/her signature</p>
+		</li><li><p>You have counter-signed the above-mentioned marks</p>
+	</li></ol>
+</li></ol>
+<h3 class="western" style="page-break-after: avoid"><font color="#0000ff">Starting
+xspim</font></h3>
+<ul>
+	<li><p style="margin-top: 0.17in">Start xspim by typing “xspim&amp;”
+	on a terminal. A window should pop-up.</p>
+	</li><li><p style="margin-top: 0.17in">There are four parts on the
+	screen. Note that you can scroll within each of the four parts,
+	using the mouse.</p>
+	</li><li><p style="margin-top: 0.17in">Note that this represents a
+	simulated MIPS machine.</p>
+	</li><li><p style="margin-top: 0.17in"><b>Question [1 mark]:</b> In the
+	xspim window, identify the various parts of the screen which you can
+	understand; also identify the parts which you cannot understand (as
+	yet).</p>
+</li></ul>
+<h3 class="western"><font color="#0000ff">Your first MIPS assembly
+language program</font></h3>
+<ul>
+	<li><p>For a MIPS assembly program, you need to specify a “text”
+	section, which indicates a region in memory where the instructions
+	are stored (recall the stored program concept)</p>
+	</li><li><p>And for spim, you need to specify a “main” label,
+	from which execution will begin</p>
+	</li><li><p>Cut-paste the following lines into a file using a text
+	editor; you can name the file anything, but we will assume below
+	that you have named it “add.s”</p>
+	<pre class="western" style="margin-bottom: 0.2in">.text</pre>
+	<pre class="western" style="margin-bottom: 0.2in">main:</pre>
+	<pre class="western" style="margin-bottom: 0.2in"># Your code starts</pre>
+	<pre class="western" style="margin-bottom: 0.2in">        from the
+	line below</pre>
+	</li><li><p>Write a program to add the integers 1 and 2; you can use the
+	“li” or “load immediate” instruction, and
+	any other appropriate instruction(s). Use appropriate registers for
+	the instructions.</p>
+	</li><li><p>Load the program in xspim using the load button. Identify
+	your part of the program on the screen.</p>
+	</li><li><p><b>Question [0.5 marks]:</b> Identify the address at which
+	your program begins. You can use the “print” “global
+	symbols” button for this.</p>
+	</li><li><p><b>Question [0.5 marks]:</b> Is “li” really a
+	MIPS instruction? Its a pseudo-instruction. What does it get
+	translated into?</p>
+	</li><li><p><b>Question [1 mark]:</b> Identify the machine code of your
+	instructions. Identify the op-codes (higher order 6 bits of the
+	machine code) of the various instructions in your assembly code.</p>
+	</li><li><p><b>Demo to TA [1 mark]:</b> Run the program by clicking the
+	“run” button. Observe the result of your instructions to
+	load/add in the appropriate register(s).</p>
+</li></ul>
+<h3 class="western" style="page-break-after: avoid"><font color="#0000ff">Stepping
+through your program</font></h3>
+<ul>
+	<li><p>You can step through your program one instruction at a time.
+	To do this, first reload “add.s” using the “reload”
+	button.</p>
+	</li><li><p>Now step using the “step” button.</p>
+	</li><li><p><b>Demo to TA [1 mark]:</b> Show how you step through the
+	instructions.</p>
+</li></ul>
+<h3 class="western" style="page-break-after: avoid"><font color="#0000ff">Using
+breakpoints</font></h3>
+<ul>
+	<li><p>You can step through small programs, but it gets cumbersome
+	as the program gets big.</p>
+	</li><li><p>You can use a “breakpoint” (or several
+	breakpoints) in the program. A “breakpoint” is a point
+	in the code where execution will temporarily stop, allowing you to
+	examine the status of your program until that place. You can examine
+	register contents or memory content, as appropriate.</p>
+	</li><li><p><b>Demo to TA [1 mark]:</b> After reloading “add.s”,
+	set an appropriate breakpoint for your program, and demonstrate its
+	usage to your TA. After encountering the breakpoint, step through
+	the rest of the instructions one after another.</p>
+</li></ul>
+<h3 class="western" style="page-break-after: avoid"><font color="#0000ff">Using
+the MIPS instruction set reference</font></h3>
+<ul>
+	<li><p>You must learn to refer to and understand an instruction set
+	reference. Look at the MIPS32 instruction set reference available on
+	bodhitree.</p>
+	</li><li><p>Change the “add.s” instruction to be able to load
+	and add the following two 32-bit values: 0x10000001 and 0x20000002.
+	You should not use any pseudo-instruction for this. You will have to
+	find out how to load a 32-bit value onto a register. <i>Hint: you
+	have to use two instructions for this.</i></p>
+	</li><li><p><b>Demo to TA [1 mark]:</b> Show how you have modified
+	“add.s” to now add two 32-bit values. Show a demo of the
+	run on xspim.</p>
+</li></ul>
+<h3 class="western" style="page-break-after: avoid"><font color="#0000ff">Your
+first non-trivial assembly language program</font></h3>
+<ul>
+	<li><p>So far you have learnt the usage of spim/xspim, and to write
+	a barebones assembly program. Now write a program to compute the GCD
+	of two (32-bit) integers. You will have to use Euclid's algorithm.
+	You can use google or ask your friend if you do not remember this;
+	but you have to <i>understand</i> <span style="font-variant: normal"><span style="font-style: normal">the
+	algorithm before proceeding. Call your program “euclid-gcd.s”.
+	</span></span><i>Hint-1: you will have to use the MIPS instruction
+	reference for further relevant instructions to use, or use a
+	simplification to the Euclid's algorithm where subtraction is used
+	instead of division. Hint-2: you may find it useful to first write
+	the C-code and then translate it to MIPS assembly code.</i></p>
+	</li><li><p><span style="font-variant: normal"><span style="font-style: normal"><b>Demo
+	to TA [3 marks]:</b></span></span> S<span style="font-variant: normal"><span style="font-style: normal">how
+	how your euclid-gcd.s program works.</span></span></p>
+</li></ul>
+<p><br><br>
+</p>
+
+</body></html>
